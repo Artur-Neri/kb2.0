@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  /* COLORS */
+
+  --color-dark-bg: #20212c;
+  --color-light-bg: #f4f7fd;
+  --color-dark-grey: #2b2c37;
+  --color-medium-grey: #828fa3;
+  --color-line-dark: #3e3f4e;
+  --color-line-light: #e4ebfa;
+  --color-black: #000112;
+  --color-white: #ffffff;
+  --color-main-purple: #635fc7;
+  --color-main-purple-hover: #a8a4ff;
+  --color-red: #ea5555;
+  --color-red-hover: #ff9898;
+
+  /* TYPOGRAPHY */
+  --font-family-main: "Plus Jakarta Sans", sans-serif;
+
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+
+  --font-size-xl: 24;
+  --line-height-xl: 30px;
+
+  --font-size-l: 18px;
+  --line-height-l: 23px;
+
+  --font-size-m: 15px;
+  --line-height-m: 16px;
+
+  --font-size-s: 12px;
+  --line-height-s: 15px;
+  --letter-spacing-s: 2.4px;
+
+  --font-size-b-l: 13px;
+  --line-height-b-l: 23px;
+
+  --font-size-b-m: 12px;
+  --line-height-b-m: 15px;
+}
+
+body {
+  font-family: var(--font-family-main);
+}
+
+.dark_theme {
+  background-color: var(--color-dark-bg);
+}
+
+.header__mobile {
+  background-color: var(--color-dark-grey);
+}
+
+.mobile_logo {.
+  width: 24px;
+  height: 24px;
+}
+.header__mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px;
+}
+
+.header__mobile_left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__mobile_board_title,
+.header__mobile_right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__mobile_board_title {
+  color: var(--color-white);
+  font-size: var(--font-size-l);
+}
+
+.header__mobile_right {
+  gap: 1rem;
+}
+
+.header__mobile_right_add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-main-purple);
+
+  padding: 10px 18px;
+  border-radius: 16px;
+}
