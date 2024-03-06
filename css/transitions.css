@@ -1,0 +1,7 @@
+#menuArrow {
+    transition: transform .2s ease-in-out;
+}
+
+#toggleBall {
+    transition: left .2s ease-in-out;
+}

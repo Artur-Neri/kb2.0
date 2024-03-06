@@ -64,6 +64,10 @@ ul {
   color: var(--color-white);
 }
 
+.hide {
+  display: none;
+}
+
 /* COMPONENT */
 .light-dark {
   background-color: var(--color-dark-bg);
@@ -72,7 +76,7 @@ ul {
   justify-content: center;
   gap: 24px;
   width: 235px;
-  margin: 0 13px 0 16px;
+  margin: 15px 13px 0 16px;
   padding: 14px 0;
   border-radius: 8px;
 }
@@ -83,22 +87,34 @@ ul {
 }
 
 .light-dark-toggle {
+  position: relative;
   width: 40px;
   height: 20px;
   background-color: var(--color-main-purple);
+  border-radius: 10px;
+  padding: 0 3px;
 }
 
 .light-dark-toggle-ball {
+  position: absolute;
+  top: 50%;
+  left: 22px;
+  transform: translateY(-50%);
   width: 15px;
   height: 15px;
   background-color: var(--color-white);
   border-radius: 50%;
+  box-shadow: 0 0 0px var(--color-black);
 }
 
 /* STYLES */
 
 #createBoard {
   color: var(--color-main-purple);
+}
+
+#createBoardIcon {
+  fill: var(--color-main-purple);
 }
 
 .board-selected .board-icon{
@@ -141,6 +157,7 @@ ul {
 .header__mobile_board_title {
   color: var(--color-white);
   font-size: var(--font-size-l);
+  cursor: pointer;
 }
 
 .header__mobile_right {
@@ -161,15 +178,17 @@ ul {
 
 .mobile-board-selection {
   display: none;
-  /* display: inline-block; PARA QUANDO FOR SELECIONAR O QUADRO */
+  /* display: inline-block;  */
   width: 240px;
-  margin-top: 10px;
+  margin-top: 16px;
   top: 80px;
 
   background-color: var(--color-dark-grey);
 
   padding: 16px 0;
   border-radius: 8px;
+
+  box-shadow: 0 10px 20px 0 #364e7e28;
 }
 
 .mobile-board-selection {
