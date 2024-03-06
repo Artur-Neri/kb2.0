@@ -42,8 +42,67 @@
   --line-height-b-m: 15px;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: var(--font-family-main);
+  text-align: center;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+/* HELPER */
+.board-selected {
+  background-color: var(--color-main-purple);
+  color: var(--color-white);
+}
+
+/* COMPONENT */
+.light-dark {
+  background-color: var(--color-dark-bg);
+
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 235px;
+  margin: 0 13px 0 16px;
+  padding: 14px 0;
+  border-radius: 8px;
+}
+
+.light-dark img {
+  width: 18px;
+  height: 18px;
+}
+
+.light-dark-toggle {
+  width: 40px;
+  height: 20px;
+  background-color: var(--color-main-purple);
+}
+
+.light-dark-toggle-ball {
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+}
+
+/* STYLES */
+
+#createBoard {
+  color: var(--color-main-purple);
+}
+
+.board-selected .board-icon{
+  fill: white;
 }
 
 .dark_theme {
@@ -54,7 +113,7 @@ body {
   background-color: var(--color-dark-grey);
 }
 
-.mobile_logo {.
+.mobile_logo {
   width: 24px;
   height: 24px;
 }
@@ -98,4 +157,56 @@ body {
 
   padding: 10px 18px;
   border-radius: 16px;
+}
+
+.mobile-board-selection {
+  display: none;
+  /* display: inline-block; PARA QUANDO FOR SELECIONAR O QUADRO */
+  width: 240px;
+  margin-top: 10px;
+  top: 80px;
+
+  background-color: var(--color-dark-grey);
+
+  padding: 16px 0;
+  border-radius: 8px;
+}
+
+.mobile-board-selection {
+  padding-right: 24px;
+  width: 264px;
+}
+
+.mobile-boards-amount {
+  text-align: left;
+  padding-left: 24px;
+  margin-bottom: 19px;
+  font-size: 12px;
+  letter-spacing: 2.4px;
+  font-weight: bold;
+
+  color: var(--color-medium-grey);
+}
+
+.mobile-boards {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--color-medium-grey);
+}
+
+.mobile-board{
+  display: flex;
+  align-items: center;
+  gap:12px;
+  padding: 14px 0;
+  padding-left: 24px;
+
+  border-top-right-radius: 23px;
+  border-bottom-right-radius: 23px;
+
 }
