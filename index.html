@@ -8,7 +8,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/logo-dark.svg"
+      href="./assets/logo-mobile.svg"
     />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -45,10 +45,74 @@
     </header>
 
     <main class="container">
-      <div class="container-mobile--empty">
+      <!-- <div class="container-mobile--empty">
           <h3>This board is empty. Create a new column to get started.</h3>
           <button class="btnPrimary">+ Add New Column</button>
+      </div> -->
+
+      <div class="container-populated">
+        
+        <div class="column">
+          <h3 class="column-title"><span class="column-color" style="background-color: #49C4E5;"></span>TODO (4)</h3>
+          <ul class="tasks">
+            <li class="task">
+              <h4 class="task-title">Build UI for onboarding flow</h4>
+              <p class="task-progress">0 of 3 subtasks</p>
+            </li>
+
+            <li class="task">
+              <h4 class="task-title">Build UI for search</h4>
+              <p class="task-progress">0 of 1 substasks</p>
+            </li>
+
+            <li class="task">
+              <h4 class="task-title">Build settings UI</h4>
+              <p class="task-progress">0 of 2 substasks</p>
+            </li>
+
+            <li class="task">
+              <h4 class="task-title">QA and test all major user journeys</h4>
+              <p class="task-progress">0 of 2 substasks</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <h3 class="column-title"><span class="column-color" style="background-color: brown;"></span>DOING (4)</h3>
+          <ul class="tasks">
+            <li class="task">
+              <h4 class="task-title">Design settings and search pages</h4>
+              <p class="task-progress">0 of 3 subtasks</p>
+            </li>
+
+            <li class="task">
+              <h4 class="task-title">Add account management endpoints</h4>
+              <p class="task-progress">0 of 3 substasks</p>
+            </li>
+
+            <li class="task">
+              <h4 class="task-title">Design onboarding flow</h4>
+              <p class="task-progress">0 of 3 substasks</p>
+            </li>
+
+            <li class="task">
+              <h4 class="task-title">Add search enpoints</h4>
+              <p class="task-progress">0 of 2 substasks</p>
+            </li>
+
+            <li class="task">
+              <h4 class="task-title">Add authentication endpoints</h4>
+              <p class="task-progress">0 of 2 substasks</p>
+            </li>
+
+            <li class="task">
+              <h4 class="task-title">Research pricing points of various competitors and trial different business models</h4>
+              <p class="task-progress">0 of 3 substasks</p>
+            </li>
+          </ul>
+        </div>
       </div>
+
     </main>
 
     <div class="mobile-board-selection" id="boardSelectionOptions">
