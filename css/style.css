@@ -229,13 +229,12 @@ ul {
   flex-direction: column;
   gap: 2px;
 
-
   font-size: 15px;
   font-weight: bold;
   color: var(--color-medium-grey);
 }
 
-.mobile-board{
+.mobile-board, .mobile-board-new{
   display: flex;
   align-items: center;
   gap:12px;

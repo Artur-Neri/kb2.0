@@ -1,6 +1,7 @@
 // DOM ELEMENTS
 const body = document.querySelector('body');
 const shadowBox = document.querySelector('#shadowBox');
+let allBoards = document.querySelectorAll('.mobile-board');
 const boardSelection = document.querySelector('#boardSelection');
 const boardSelectionOptions = document.querySelector('#boardSelectionOptions');
 const menuArrow = document.querySelector('#menuArrow');
@@ -13,6 +14,13 @@ boardSelection.onclick = handlesBoardSelection;
 shadowBox.onclick = closeBoardOptions;
 
 toggleLightDark.onclick = handleLightDarkMode;
+
+allBoards.forEach(board => {
+    board.onclick = function(){
+        clearBoardSelection();
+        this.classList.add('board-selected');
+    };
+})
 
 function handlesBoardSelection() {
         openBoardOptions(); 
@@ -39,4 +47,13 @@ function handleLightDarkMode() {
     } else {
         toggleBall.style.left = '22px';
     }
+}
+
+
+
+function clearBoardSelection() {
+    console.log(allBoards);
+    allBoards.forEach(board => {
+        board.classList.remove('board-selected');
+    })
 }
