@@ -56,4 +56,4 @@ function clearBoardSelection() {
     allBoards.forEach(board => {
         board.classList.remove('board-selected');
     })
-}
+}     

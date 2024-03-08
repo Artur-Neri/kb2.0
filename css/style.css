@@ -304,7 +304,8 @@ ul {
 }
 
 .column {
-  max-height: calc(100% - 64px);
+  max-height: calc(100vh - 88px);
+  overflow-y: scroll;
 }
 
 .column-title {
