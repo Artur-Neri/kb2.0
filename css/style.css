@@ -249,8 +249,6 @@ ul {
   flex: 1;
   display: flex;
   align-items: center;
-
-  overflow: scroll;
  }
 
  .container-mobile--empty {
@@ -305,7 +303,6 @@ ul {
 
 .column {
   max-height: calc(100vh - 88px);
-  overflow-y: scroll;
 }
 
 .column-title {
@@ -335,8 +332,9 @@ ul {
 .tasks {
   display: flex;
   flex-direction: column;
-
+  height: calc(100% - 60px);
   gap: 20px;
+  overflow-y: scroll;
 }
 
 .task {
