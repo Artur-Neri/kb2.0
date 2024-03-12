@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+/* TYPOGRAPHY */
+.header {
+  display: flex;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+.jc-c {
+  justify-content: center;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.board-selected {
+  display: flex;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.btn-addTask {
+  padding: 10px 18px;
+  border-radius: 24PX;
+  background-color: #635fc7;
+  opacity: 0.5;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.shadow-box {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.205);
+}
+
+/* COLORS */
+/* TYPOGRAPHY */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  flex: 1;
+  background-color: #f4f7fd;
+}/*# sourceMappingURL=style.css.map */

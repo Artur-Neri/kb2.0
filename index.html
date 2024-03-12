@@ -11,46 +11,34 @@
       href="./assets/logo-mobile.svg"
     />
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./css/transitions.css" />
 
     <title>Kanban</title>
   </head>
   <body class="dark_theme">
 
-    <div class="shadowBox" id="shadowBox"></div>
+    <header class="header jc-sb ai-c">
 
-    <header class="header__mobile">
-      <div class="header__mobile_left">
-        <img
-          src="./assets/logo-mobile.svg"
-          alt="kanban mobile logo"
-          class="mobile_logo"
-        />
-        <div class="header__mobile_board_title" id="boardSelection">
-          <h1 class="header__mobile_board_title" id="selectedBoardTitle">Platform Launch</h1>
-          <img src="./assets/icon-chevron-down.svg" alt="arrow down" id="menuArrow"/>
-        </div>
+      <div class="header-left jc-sb ai-c">
+        <img src="./assets/logo-mobile.svg" alt="kanban logo" title="Kanban">
+        <button class="board-selected ai-c"><span id="pageTitle">Platform Lauch</span> <img src="./assets/icon-chevron-down.svg" alt="down arrow"></button>
       </div>
-      <div class="header__mobile_right">
-        <button class="header__mobile_right_add inactive">
-          <img src="./assets/icon-add-task-mobile.svg" alt="plus sign" />
-        </button>
-        <img
-          src="./assets/icon-vertical-ellipsis.svg"
-          alt="options vertical icon"
-          class="inactive"
-        />
+
+      <div class="header-right jc-sb ai-c">
+        <button class="btn-addTask" id="btnAddTask"><img src="./assets/icon-add-task-mobile.svg" alt="add task icon"></button>
+        <img src="./assets/icon-vertical-ellipsis.svg" alt="open board options">
       </div>
+
     </header>
 
     <main class="container">
-      <!-- <div class="container-mobile--empty">
-          <h3>This board is empty. Create a new column to get started.</h3>
-          <button class="btnPrimary">+ Add New Column</button>
-      </div> -->
+      <div class="shadow-box"></div>
+      <div class="boards-list"></div>
+    </main>
 
-      <div class="container-populated">
+
+      <!-- <div class="container-populated">
         
         <div class="column">
           <h3 class="column-title"><span class="column-color" style="background-color: #49C4E5;"></span>TODO (4)</h3>
@@ -111,25 +99,9 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> -->
 
     </main>
-
-    <div class="mobile-board-selection" id="boardSelectionOptions">
-      <h3 class="mobile-boards-amount">ALL BOARDS (3)</h3>
-      <ul class="mobile-boards" id="mobileBoards">
-        <li class="mobile-board board-selected"><span>Platform Launch</span></li>
-        <li class="mobile-board"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path class="board-icon" d="M0 2.889A2.889 2.889 0 0 1 2.889 0H13.11A2.889 2.889 0 0 1 16 2.889V13.11A2.888 2.888 0 0 1 13.111 16H2.89A2.889 2.889 0 0 1 0 13.111V2.89Zm1.333 5.555v4.667c0 .859.697 1.556 1.556 1.556h6.889V8.444H1.333Zm8.445-1.333V1.333h-6.89A1.556 1.556 0 0 0 1.334 2.89V7.11h8.445Zm4.889-1.333H11.11v4.444h3.556V5.778Zm0 5.778H11.11v3.11h2a1.556 1.556 0 0 0 1.556-1.555v-1.555Zm0-7.112V2.89a1.555 1.555 0 0 0-1.556-1.556h-2v3.111h3.556Z" fill="#828FA3"/></svg><span>Marketing Plan</span></li>
-        <li class="mobile-board"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path class="board-icon" d="M0 2.889A2.889 2.889 0 0 1 2.889 0H13.11A2.889 2.889 0 0 1 16 2.889V13.11A2.888 2.888 0 0 1 13.111 16H2.89A2.889 2.889 0 0 1 0 13.111V2.89Zm1.333 5.555v4.667c0 .859.697 1.556 1.556 1.556h6.889V8.444H1.333Zm8.445-1.333V1.333h-6.89A1.556 1.556 0 0 0 1.334 2.89V7.11h8.445Zm4.889-1.333H11.11v4.444h3.556V5.778Zm0 5.778H11.11v3.11h2a1.556 1.556 0 0 0 1.556-1.555v-1.555Zm0-7.112V2.89a1.555 1.555 0 0 0-1.556-1.556h-2v3.111h3.556Z" fill="#828FA3"/></svg><span>Roadmap</span></li>
-      </ul>
-      <div class="light-dark">
-        <img src="./assets/icon-light-theme.svg" alt="light theme icon">
-        <div class="light-dark-toggle " id="ldToggle">
-          <div class="light-dark-toggle-ball" id="toggleBall"></div>
-        </div>
-        <img src="./assets/icon-dark-theme.svg" alt="dark theme icon">
-      </div>
-    </div>
 
     <script src="./js/main.js" type="module"></script>
   </body>

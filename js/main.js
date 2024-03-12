@@ -6,86 +6,18 @@ const boardIconSelected = `<svg width="16" height="16" xmlns="http://www.w3.org/
 
 let allBoards = data.boards;
 
-// DOM ELEMENTS
-const body = document.querySelector('body');
-const shadowBox = document.querySelector('#shadowBox');
-const boardSelection = document.querySelector('#boardSelection');
-const boardSelectionOptions = document.querySelector('#boardSelectionOptions');
-const menuArrow = document.querySelector('#menuArrow');
-const boardTitle = document.querySelector('#selectedBoardTitle');
-
-// toggle
-const toggleLightDark = document.querySelector('#ldToggle');
-const toggleBall = document.querySelector('#toggleBall');
-
-boardSelection.onclick = handlesBoardSelection;
-    shadowBox.onclick = closeBoardOptions;
-
-toggleLightDark.onclick = handleLightDarkMode;
-
-function handlesBoardSelection() {
-        openBoardOptions(); 
+window.onload = function(){
+    const firstBoard = allBoards[0]
+    loadPageTitle(firstBoard.name);
+    enableAddTask(firstBoard.columns);
 }
 
-function openBoardOptions() {
-    boardSelectionOptions.style.display = 'inline-block';
-    menuArrow.style.transform = 'rotate(180deg)';
-    shadowBox.style.display = 'block';
+function loadPageTitle(boardName) {
+    document.querySelector('#pageTitle').innerHTML = boardName;
 }
 
-function closeBoardOptions() {
-    shadowBox.style.display = 'none';
-    boardSelectionOptions.style.display = 'none';
-    menuArrow.style.transform = 'rotate(0deg)';
-}
-
-// SWITCHES BETWEEN LIGHT AND DARK MODE
-function handleLightDarkMode() {
-    toggleLightDark.classList.toggle('light');
-    if (toggleLightDark.classList.contains('light')){
-        toggleBall.style.left = '3px';
-
-    } else {
-        toggleBall.style.left = '22px';
+function enableAddTask(boardColumns) {
+    if (boardColumns.length) {
+        document.querySelector('#btnAddTask').style.opacity = 1
     }
 }
-
-
-
-function clearBoardSelection(boardsList) {
-    boardsList.forEach(board => {
-        board.classList.remove('board-selected');
-    })
-}     
-
-function createBoardsList() {
-    let boardList = []
-    let index = -1;
-    boardList = allBoards.map(board => {
-        index++;
-        return `<li data-id=${index} class="mobile-board">${boardIcon}<span>${board.name}</span></li>`
-    }).join('');
-    return boardList;
-}
-
-function populateBoardsList() {
-    const mobileBoards = document.querySelector('#mobileBoards');
-    mobileBoards.innerHTML = createBoardsList();
-    mobileBoards.children[0].classList.add('board-selected');
-    mobileBoards.innerHTML += `<li class="mobile-board-new" id="createBoard">${boardIconSelected}<span>+ Create New Board</span></li>`
-
-
-    let boardsList = document.querySelectorAll('.mobile-board');
-
-    boardsList.forEach(board => {
-    board.onclick = function(){
-        clearBoardSelection(boardsList);
-        this.classList.add('board-selected');
-        selectedBoardTitle.innerText = allBoards[this.dataset.id].name;
-    };
-
-
-})
-}
-
-populateBoardsList();
